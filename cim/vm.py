@@ -30,7 +30,7 @@ for i in range(languages):
     driver.switch_to.window(driver.window_handles[i+1])
     time.sleep(t1)
     driver.get(url)
-    time.sleep(t)
+    time.sleep(15)
     driver.find_element_by_xpath('//*[@id="HTML7"]/div[1]/button').click()
     time.sleep(t2)
 time.sleep(ov)
