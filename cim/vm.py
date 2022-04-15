@@ -14,21 +14,23 @@ import string
 import os
 
 ###TEMP-NAMES###
-
-t = random.randint(30,31)
-t1 = random.randint(200,320)
-t2 = random.randint(5,60)
+ov1 = random.randint(1,15)
+t = random.randint(8,15)
+t1 = random.randint(5,10)
+t2 = random.randint(5,20)
+ov = random.randint(270,300)
 url_list= ['https://shortznewz.blogspot.com/2022/04/some-best-places-in-dubai.html?m=1', 'https://shortznewz.blogspot.com/2022/04/best-places-to-visit.html', 'https://shortznewz.blogspot.com/2022/04/facts-about-humans.html', 'https://shortznewz.blogspot.com/2022/04/random-facts.html', 'https://shortznewz.blogspot.com/2022/04/interesting-facts.html']
 url = random.choice(url_list)
 driver = webdriver.Chrome()
+time.sleep(ov1)
 driver.get(url)
-time.sleep(4)
 languages = 8
 for i in range(languages):
     driver.execute_script("window.open()")
     driver.switch_to.window(driver.window_handles[i+1])
+    time.sleep(t1)
     driver.get(url)
-    time.sleep(10)
-    driver.find_element_by_xpath('/html/body/div/div[2]/aside/div/div[1]/div[1]/div[1]/button').click()
-    time.sleep(5)
-time.sleep(300)
+    time.sleep(t)
+    driver.find_element_by_xpath('//*[@id="HTML7"]/div[1]/button').click()
+    time.sleep(t2)
+time.sleep(ov)
