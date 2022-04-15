@@ -18,7 +18,7 @@ import os
 
 ###TEMP-NAMES###
 ov1 = random.randint(1,15)
-t = random.randint(8,15)
+t = random.randint(12,17)
 t1 = random.randint(5,10)
 t2 = random.randint(5,20)
 ov = random.randint(270,300)
@@ -33,7 +33,7 @@ for i in range(languages):
     driver.switch_to.window(driver.window_handles[i+1])
     time.sleep(t1)
     driver.get(url)
-    time.sleep(40)
-    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="HTML7"]/div[1]/button'))).click()
+    time.sleep(t)
+    driver.find_element_by_xpath('//*[@id="HTML7"]/div[1]/button').click()    
     time.sleep(t2)
 time.sleep(ov)
