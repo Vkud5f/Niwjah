@@ -16,7 +16,7 @@ import os
 ###TEMP-NAMES###
 
 t = random.randint(15,31)
-t1 = random.randint(200,320)
+t1 = random.randint(150,230)
 t2 = random.randint(5,60)
 url_list= ['https://shortznewz.blogspot.com/2022/04/some-best-places-in-dubai.html?m=1', 'https://shortznewz.blogspot.com/2022/04/best-places-to-visit.html', 'https://shortznewz.blogspot.com/2022/04/facts-about-humans.html', 'https://shortznewz.blogspot.com/2022/04/random-facts.html', 'https://shortznewz.blogspot.com/2022/04/interesting-facts.html']
 url = random.choice(url_list)
