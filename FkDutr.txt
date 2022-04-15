@@ -5,5 +5,3 @@ hsh
 yhs
 fhs
 gji
-hh
-jkd
