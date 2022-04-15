@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains  
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -30,7 +33,7 @@ for i in range(languages):
     driver.switch_to.window(driver.window_handles[i+1])
     time.sleep(t1)
     driver.get(url)
-    time.sleep(15)
-    driver.find_element_by_xpath('//*[@id="HTML7"]/div[1]/button').click()
+    time.sleep(40)
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="HTML7"]/div[1]/button'))).click()
     time.sleep(t2)
 time.sleep(ov)
