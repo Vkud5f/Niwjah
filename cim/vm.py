@@ -15,9 +15,9 @@ import os
 
 ###TEMP-NAMES###
 
-t = random.randint(15,31)
-t1 = random.randint(150,230)
-t2 = random.randint(5,60)
+t = random.randint(63,75)
+t1 = random.randint(180,250)
+t2 = random.randint(5,40)
 url_list= ['https://shortznewz.blogspot.com/2022/04/some-best-places-in-dubai.html?m=1', 'https://shortznewz.blogspot.com/2022/04/best-places-to-visit.html', 'https://shortznewz.blogspot.com/2022/04/facts-about-humans.html', 'https://shortznewz.blogspot.com/2022/04/random-facts.html', 'https://shortznewz.blogspot.com/2022/04/interesting-facts.html']
 url = random.choice(url_list)
 
@@ -28,6 +28,4 @@ time.sleep(t)
 driver.find_element_by_xpath('//*[@id="HTML7"]/div[1]/button').click()
 time.sleep(10)
 driver.find_element_by_xpath('//*[@id="iframeDisplay"]').click()
-time.sleep(t1)
-'''driver.find_element_by_xpath('//*[@id="skip_bu2tton"]/img').click()
-time.sleep(t1)'''
+time.sleep(t)
